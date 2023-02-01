@@ -17,16 +17,181 @@ a {
 #container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 200px 1fr;
 }
 
 #left {
+    padding-top: 50px;
+    background: #ddd;
+}
+
+#left > nav {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    background: grey;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+#left > nav a {
+    text-align: left;
+}
+
+#left > nav > a:hover {
+    background: lightgrey;
+}
+
+#contact {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
 }
 
 #right {
-    padding: 10px 100px;
+    overflow-y: scroll;
+}
+
+#main {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.section-hdr {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* ABOUT */
+
+#about {
+    position: relative;
+}
+
+#profile {
+    z-index: 0;
+    position: absolute;
+    width: 300px;
+    top: 0;
+    right: 0;
+}
+
+.hero-text {
+    width: 60%;
+}
+
+.hero-text-1 {
+    font-size: 38px;
+}
+
+.hero-text-2, .hero-text-3 {
+    margin-top: 50px;
+    font-size: 24px;
+    line-height: 1.5em;
+}
+
+.hero-text-2 > strong {
+    color: #333;
+    position: relative;
+    border-bottom: 4px solid darkgrey;
+}
+
+/* --- EDUCATION --- */
+
+#edu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* --- SKILLS --- */
+
+#skill-section{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#skill-section h4 {
+    margin-bottom: 10px;
+}
+
+#skill-section li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+/* --- PROJECTS --- */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#projects .project {
+    height: 250px;
+    background: white;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.1);
+}
+
+.project-hdr, .project-description {
+    padding: 20px;
+}
+
+.project-description {
+    line-height: 1.5em;
+}
+
+
+.project-name {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.tech-stack img {
+    width: 40px;
+    margin-top: 20px;
+}
+
+/* --- CERTIFICATIONS --- */
+
+.cert {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    height: 80px;
+    width: max-content;
+}
+
+.cert-desc {
+    position: relative;
+    padding-left: 10px;
+    line-height: 1.5em;
+}
+
+.cert-hdr img {
+    width: 80px;
+    padding: 10px;
+    background: #0a0a23;
+}
+
+.cert-link {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    line-height: 1em;
+    margin-top: 5px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 25px;
+    padding: 8px 20px;
+    height: 16px;
 }
