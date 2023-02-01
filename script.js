@@ -31,7 +31,6 @@ function showDescription(e) {
     if (listItem != selectedSkill) {
         selectedSkill = listItem
         listItem.style.background="#bbb";
-        console.log(selectedSkill.innerHTML)
         descPara.innerHTML = skilldesc[selectedSkill.innerHTML]
     } else {
         selectedSkill = null;
