@@ -25,12 +25,14 @@ let skilldesc = {
 function showDescription(e) {
     for (let skill of skills) {
         skill.style.background="#fff"
+        skill.style.color="#000";
     }
     descPara.innerHTML = descInit
     listItem = e.target;
     if (listItem != selectedSkill) {
         selectedSkill = listItem
-        listItem.style.background="#bbb";
+        listItem.style.background="#333";
+        listItem.style.color="#fff";
         descPara.innerHTML = skilldesc[selectedSkill.innerHTML]
     } else {
         selectedSkill = null;

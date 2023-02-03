@@ -18,10 +18,13 @@ a {
     height: 100vh;
     display: grid;
     grid-template-columns: 200px 1fr;
+    background: #ddd;
 }
 
 #left {
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #ddd;
 }
 
@@ -52,7 +55,7 @@ a {
 }
 
 #main {
-    padding: 100px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -64,8 +67,9 @@ a {
 }
 
 .section-hdr {
-    font-size: 38px;
+    font-size: 32px;
     margin-bottom: 20px;
+    color: #666;
 }
 
 /* ABOUT */
@@ -75,7 +79,6 @@ a {
 }
 
 #profile {
-    z-index: 0;
     position: absolute;
     width: 300px;
     top: 0;
@@ -110,6 +113,10 @@ a {
     gap: 50px;
 }
 
+#edu-section p {
+    font-size: 0.9em;
+}
+
 /* --- SKILLS --- */
 
 #skill-section{
@@ -121,12 +128,13 @@ a {
 #skill-list {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
 }
 
 #skill-section h4 {
     margin-top: 10px;
     margin-bottom: 5px;
+    width: max-content;
 }
 
 #skill-section ul {
@@ -140,10 +148,12 @@ a {
 #skill-section li {
     display: block;
     list-style: none;
-    margin: 5px;
+    margin: 5px 0;
+    margin-right: 5px;
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
+    background: #fff;
 }
 
 #skill-section li:hover {
@@ -151,7 +161,7 @@ a {
 }
 
 #skill-desc {
-    width: 60%;
+    width: 40%;
     padding: 40px;
     grid-column: 2 / 3;
     grid-row: 1 / 6;
@@ -178,7 +188,7 @@ a {
     height: 10px;
     width: 10px;
     position: absolute;
-    background: #fff;
+    background: #ddd;
     border-right: 1px solid grey;
     border-top: 1px solid grey;
     top: calc(50% - 5px);
@@ -195,7 +205,8 @@ a {
 }
 
 #projects .project {
-    height: 250px;
+    min-height: 250px;
+    max-height: max-content;
     background: white;
     border-radius: 25px;
     display: grid;
@@ -228,7 +239,8 @@ a {
     display: grid;
     grid-template-columns: 100px 1fr;
     height: 80px;
-    width: max-content;
+    width: 500px;
+    margin-bottom: 20px;
 }
 
 .cert-desc {
@@ -254,4 +266,93 @@ a {
     border-radius: 25px;
     padding: 8px 20px;
     height: 16px;
+}
+
+
+@media (max-width: 1100px) {
+    .profile-cropper {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+    }
+
+    #profile {
+        top: -15%;
+        left: -5px;
+        width: 280px;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+
+
+    #left {
+        padding: 0;
+    }
+
+    #left > nav {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        gap: 20px;
+        background: #ddd;
+    }
+
+    #skill-section {
+        flex-direction: column;
+    }
+
+    #skill-list {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #skill-list li {
+        font-size: 0.8em;
+    }
+
+    #contact {
+        margin-top: 50vh;
+        position: fixed;
+        flex-direction: column;
+        background: #aaa;
+        color: #333;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    #left hr {
+        display: none;
+    }
+
+    #left nav a {
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-end;
+        height: 60px;
+        border-bottom: 5px solid lightgrey;
+        width: max-content;
+    }
+    
+    #left nav a:active {
+        color: red;
+    }      
+
+    #left nav a:hover {
+        border-bottom: 5px solid #666;
+        background: initial;
+    }
+
+    #projects .project {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px;
+    }
 }
