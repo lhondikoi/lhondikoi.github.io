@@ -133,7 +133,13 @@ a {
 #skill-section{
     padding: 10px;
     display: flex;
-    height: max-content
+    height: max-content;
+    width: 100%;
+    margin: 0;
+    height: 200px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
 }
 
 #skill-list {
@@ -149,14 +155,21 @@ a {
 }
 
 #skill-section ul {
+    width: 100%;
     display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
     flex-wrap: wrap;
 }
 
-#skill-section li {
+.skill-hdr {
+    display: block;
+    list-style: none;
+    margin: 5px 0;
+    margin-right: 5px;
+    padding: 5px 10px;
+    color: #666;
+}
+
+.skill-item {
     display: block;
     list-style: none;
     margin: 5px 0;
@@ -167,17 +180,17 @@ a {
     background: #fff;
 }
 
-#skill-section li:hover {
+.skill-item:hover {
     cursor: pointer;
 }
 
 #skill-desc {
     width: 40%;
-    padding: 40px;
+    padding: 25px;
     grid-column: 2 / 3;
     grid-row: 1 / 6;
     font-size: 2.0em;
-    line-height: 1.5em;
+    line-height: 1.2em;
     color: #666;
     display: grid;
     grid-template-columns: 1fr;
@@ -188,10 +201,10 @@ a {
 
 #separator {
     left: 0;
-    top: 25%;
     position: absolute;
-    height: 50%;
+    height: 80%;
     width: 1px;
+    margin: 0 10px;
     background: grey;
 }
 
@@ -199,7 +212,7 @@ a {
     height: 10px;
     width: 10px;
     position: absolute;
-    background: #ddd;
+    background: #fff;
     border-right: 1px solid grey;
     border-top: 1px solid grey;
     top: calc(50% - 5px);
@@ -208,6 +221,8 @@ a {
 }
 
 /* --- PROJECTS --- */
+
+
 
 #projects {
     display: flex;
@@ -288,6 +303,7 @@ a {
         overflow: hidden;
         position: relative;
         margin: auto;
+        margin-bottom: 50px;
     }
 
     #profile {
@@ -304,7 +320,6 @@ a {
         grid-template-columns: 1fr;
     }
 
-
     #left {
         padding: 0;
     }
@@ -313,21 +328,32 @@ a {
         flex-direction: row;
         justify-content: center;
         margin: 0;
-        gap: 20px;
+        gap: 5px;
+        width: 100vw;
         background: #ddd;
+    }
+
+    #left > nav > a {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+
+    .hero-text {
+        width: 100%;
     }
 
     #skill-section {
         flex-direction: column;
+        width: 200px;
+        height: max-content;
     }
 
     #skill-list {
-        flex-direction: row;
-        gap: 10px;
+        width: 100%
     }
 
-    #skill-list li {
-        font-size: 0.8em;
+    #skill-desc {
+        width: 100%;
     }
 
     #contact {
@@ -365,5 +391,16 @@ a {
     #projects .project {
         grid-template-columns: 1fr;
         grid-template-rows: 100px;
+    }
+
+    .cert {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: max-content;
+    }
+
+    .cert-hdr img {
+        width: 40px;
+        margin-left: calc(50% - 25px);
     }
 }
