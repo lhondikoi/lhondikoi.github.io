@@ -78,11 +78,22 @@ a {
     position: relative;
 }
 
+.profile-cropper {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    border-radius: 50%;
+    background: lightgrey;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
 #profile {
     position: absolute;
     width: 300px;
-    top: 0;
-    right: 0;
+    top: -40px;
+    right: -10px;
 }
 
 .hero-text {
@@ -320,7 +331,7 @@ a {
     }
 
     #contact {
-        margin-top: 50vh;
+        bottom: 15vh;
         position: fixed;
         flex-direction: column;
         background: #aaa;
